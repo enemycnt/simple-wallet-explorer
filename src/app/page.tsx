@@ -6,7 +6,7 @@ export default function Home() {
   const router = useRouter();
   const [network, setNetwork] = useState<string>("ethereum");
   const [address, setAddress] = useState<string>(
-    "0x1f9090aaE28b8a3dCeaDf281B0F12828e676c326f"
+    "0x690B9A9E9aa1C9dB991C7721a92d351Db4FaC990"
   );
   const submit = (e: FormEvent) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ export default function Home() {
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
-                className="fill-current h-4 w-4"
+                className="fill-current h-4 w-4 dark:text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >

@@ -103,10 +103,6 @@ export default function TransactionTable({
                 </td>
                 <td className="px-1 md:px-6 py-4 text-ellipsis overflow-hidden">
                   <>
-                    {console.log(
-                      "🚀 ~ file: TransactionsTable.tsx:107 ~ transaction.value:",
-                      transaction.value
-                    )}
                     {`${ethers.formatEther(transaction.value)} ${nativeToken}`}
                   </>
                 </td>
