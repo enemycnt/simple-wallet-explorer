@@ -30,11 +30,12 @@ const getTransactions = async (
   return parseResponse.result as Array<Transaction>;
 };
 
-export default async function Transactions({
-  params,
-}: {
-  params: { address: string; network: string };
-}) {
+export default async function Transactions(
+  props: {
+    params: Promise<{ address: string; network: string }>;
+  }
+) {
+  const params = await props.params;
   const { address, network } = params;
   const walletBallanceData = getBalance(address, network);
   const transactionListData = getTransactions(address, network);

@@ -41,11 +41,12 @@ const getTransactionDetailed = async (hash: string, network: string) => {
   return result;
 };
 
-export default async function Details({
-  params,
-}: {
-  params: { hash: string; network: string };
-}) {
+export default async function Details(
+  props: {
+    params: Promise<{ hash: string; network: string }>;
+  }
+) {
+  const params = await props.params;
   const { hash, network } = params;
   const { nativeToken, explorerUrl, explorerName } = networksConfig[network];
   const transactionDetailed = await getTransactionDetailed(hash, network);
